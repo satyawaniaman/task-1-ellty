@@ -8,9 +8,7 @@ const FrameDemo = () => {
   const isFramed = true; // Toggle between the two presentations
 
   return (
-    <div
-      className={`relative ${isFramed ? "border border-dashed border-purple-500 p-6" : ""}`}
-    >
+    <div className={`relative ${isFramed ? " p-6" : ""}`}>
       {/* Main component */}
       <div
         className={`w-[400px] mx-auto bg-white rounded-lg`}
@@ -80,13 +78,6 @@ const FrameDemo = () => {
           <Button variant="variant3">Done</Button>
         </div>
       </div>
-
-      {/* Label at the bottom - only shown in framed mode */}
-      {isFramed && (
-        <div className="absolute bottom-[-25px] left-1/2 transform -translate-x-1/2 bg-purple-500 text-white text-xs px-2 py-1 rounded">
-          Frame
-        </div>
-      )}
     </div>
   );
 };

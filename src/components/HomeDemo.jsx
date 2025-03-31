@@ -3,7 +3,7 @@ import { Checkbox } from "./CheckBox";
 
 const HomeDemo = () => {
   return (
-    <div className="relative w-[410px] h-[520px] border border-dashed border-[#9747FF] rounded-[5px] p-4">
+    <div className="relative w-[410px] h-[520px]  rounded-[5px] p-4">
       {/* Checkbox rows */}
       <div className="flex flex-col gap-3">
         {/* Row 1 */}
@@ -57,11 +57,6 @@ const HomeDemo = () => {
           <span>All pages</span>
           <Checkbox variant={2} />
         </div>
-      </div>
-
-      {/* Label at the bottom */}
-      <div className="absolute bottom-[-25px] left-1/2 transform -translate-x-1/2 bg-[#9747FF] text-white text-xs px-2 py-1 rounded">
-        Home
       </div>
     </div>
   );

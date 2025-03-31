@@ -4,10 +4,8 @@ const Button = ({ variant = "default", children, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
 
-  // Base styles for all variants
   const baseStyles = "font-medium text-center transition-colors";
 
-  // Variant specific styles
   const variantStyles = {
     default: `w-[340px] h-[40px] rounded-[4px] px-5 py-2.5 bg-[#FFCE22]`,
     variant2: `w-[340px] h-[40px] rounded-[4px] px-5 py-2.5 bg-[#FFD84D]`,
@@ -35,18 +33,20 @@ const Button = ({ variant = "default", children, onClick }) => {
 
   return (
     <button
-      className={`${baseStyles} ${variantStyles[variant]}`}
+      className={`${baseStyles} ${
+        isHovered && variant === "default"
+          ? variantStyles["variant2"]
+          : isPressed && variant === "variant2"
+            ? variantStyles["variant3"]
+            : variantStyles[variant]
+      }`}
       onClick={onClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
     >
-      {isHovered && variant === "default"
-        ? "Variant2"
-        : isPressed && variant === "variant2"
-          ? "Variant3"
-          : children}
+      {children}
     </button>
   );
 };

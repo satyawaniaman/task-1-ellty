@@ -4,20 +4,13 @@ import Button from "./Button";
 
 const ButtonDemo = () => {
   return (
-    <div className="p-4 flex flex-col gap-2">
-      <div>
-        <h2 className="text-lg font-semibold mb-2">Default Button</h2>
-        <Button variant="default">Done</Button>
-      </div>
+    <div className="relative w-[380px] h-[200px] border border-dashed border-[#9747FF] rounded-[5px] p-5 flex flex-col justify-between">
+      <Button variant="default">Done</Button>
+      <Button variant="variant2">Done</Button>
+      <Button variant="variant3">Done</Button>
 
-      <div className="mt-[60px]">
-        <h2 className="text-lg font-semibold mb-2">Variant 2 Button</h2>
-        <Button variant="variant2">Done</Button>
-      </div>
-
-      <div className="mt-[60px]">
-        <h2 className="text-lg font-semibold mb-2">Variant 3 Button</h2>
-        <Button variant="variant3">Done</Button>
+      <div className="absolute bottom-[-25px] left-1/2 transform -translate-x-1/2 bg-[#9747FF] text-white text-xs px-2 py-1 rounded">
+        Buttons
       </div>
     </div>
   );

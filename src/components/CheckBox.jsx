@@ -54,6 +54,9 @@ export const Checkbox = ({ variant }) => {
     // Handle all mouse interactions in one place
     if (originalVariant.current === 1 && currentVariant === 2) {
       setCurrentVariant(9); // variant 1 hovered (showing as 2) changes to 9 when clicked
+    } else if (originalVariant.current === 2) {
+      // Added this condition: variant 2 changes to 9 when clicked
+      setCurrentVariant(9);
     } else if (originalVariant.current === 5 && currentVariant === 6) {
       setCurrentVariant(7); // variant 5 hovered (showing as 6) changes to 7 when clicked
     } else if (originalVariant.current === 9) {

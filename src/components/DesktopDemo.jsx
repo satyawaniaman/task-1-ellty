@@ -11,7 +11,7 @@ const DesktopDemo = () => {
       <Checkbox variant={7} />
       <Checkbox variant={8} />
       <Checkbox variant={10} />
-      <div className="absolute -bottom-6 left-0 w-full text-center text-xs text-purple-500">
+      <div className="absolute -bottom-6 left-0 w-full text-center bg-[#9747FF] text-white text-xs px-2 py-1 rounded">
         Desktop
       </div>
     </div>
